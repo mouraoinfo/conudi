@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-conversor',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConversorComponent implements OnInit {
 
-  constructor() { }
+ 
+  @Input()
+  metros = null;
+
+  quilometros = null;
 
   ngOnInit() {
+    this.quilometros = this.metros/1000;
   }
 
+  
+  
 }
